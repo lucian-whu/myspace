@@ -46,7 +46,7 @@ class Tag(models.Model):
 
 # 文章分类
 class Category(models.Model):
-    name = models.CharField('文章分类', max_length=100)
+    name = models.CharField('文章分类', max_length=300)
     slug = models.SlugField(unique=True)
     description = models.TextField('描述', max_length=240, default=settings.SITE_DESCRIPTION,
                                    help_text='用来作为SEO中description,长度参考SEO标准')
